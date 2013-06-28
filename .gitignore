@@ -1,2 +1,3 @@
 *.pyc
 treasuryio.egg-info
+dist
