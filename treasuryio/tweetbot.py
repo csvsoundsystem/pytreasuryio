@@ -28,9 +28,11 @@ def tweet(tweet_text_func):
         def not_an_interesting_tweet():
             return 'This tweet is not data-driven.'
     '''
-    api = _connect_to_twitter()
-    tweet = tweet_text_func()
-    print "Tweeting: %s" % tweet
-    api.update_status(tweet)
-    return tweet
+    def tweet_func():
+        api = _connect_to_twitter()
+        tweet = tweet_text_func()
+        print "Tweeting: %s" % tweet
+        api.update_status(tweet)
+        return tweet
 
+    return tweet_func
