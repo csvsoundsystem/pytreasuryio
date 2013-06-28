@@ -34,6 +34,17 @@ Define a function that produces the text of the tweet, and decorate it with the
 ``@treasurio.tweet`` decorator.::
 
     import treasuryio
+    import humanize
+    import math
+
+    MIL = 1e6
+
+    # Helpers to humanize numbers / dates
+    def human_number(num):
+        return humanize.intword(int(math.ceil(num))).lower()
+
+    def human_date(date):
+        return humanize.naturalday(date).title()
 
     @treasuryio.tweet
     def total_debt_tweet():
