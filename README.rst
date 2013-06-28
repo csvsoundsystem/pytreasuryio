@@ -1,8 +1,8 @@
 pytreasuryio
 ======
-Access [treasury.io](http://treasury.io) from Python.
+Access .. _treasury.io: http://treasury.io from Python.
 
-This is a package consisting of a single, simple function for submitting ``SQL`` queries to [treasury.io](http://treasury.io) from ``R``. While you could simply copy-and-paste the function from script-to-script, this makes it quicker and easier to get up and running!
+This is a package consisting of a single, simple function for submitting ``SQL`` queries to .. _treasury.io: http://treasury.io from ``python``. While you could simply copy-and-paste the function from script-to-script, this makes it quicker and easier to get up and running!
 
 It also has some helpers to make a Twitter bot from the treasury.io data.
 
