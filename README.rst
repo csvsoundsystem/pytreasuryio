@@ -2,30 +2,36 @@ pytreasuryio
 ======
 Access [treasury.io](http://treasury.io) from Python.
 
-This is a package consisting of a single, simple function for submitting `SQL` queries to [treasury.io](http://treasury.io) from `R`. While you could simply copy-and-paste the function from script-to-script, this makes it quicker and easier to get up and running!
+This is a package consisting of a single, simple function for submitting ``SQL`` queries to [treasury.io](http://treasury.io) from ``R``. While you could simply copy-and-paste the function from script-to-script, this makes it quicker and easier to get up and running!
 
 It also has some helpers to make a Twitter bot from the treasury.io data.
 
-## Installation
+Installation
+--------
+Install with pip.::
 
     pip install treasuryio
 
-## Example
+Example
+---------
 
-### Basic query
+Basic query
+~~~~~~~~~
+Send an SQL query and receive a pandas data frame.::
 
     # Operating cash balances for May 22, 2013
     import treasuryio
     sql = 'SELECT * FROM "t1" WHERE "date" = \'2013-05-22\';'
     treasuryio.query(sql)
 
-### Twitter bot
-Write a `~/.twitter.yml` file.
+Twitter bot
+~~~~~~~~~
+Write a ``~/.twitter.yml`` file.::
 
+    # Example goes here.
     
-
 Define a function that produces the text of the tweet, and decorate it with the
-`@treasurio.tweet` decorator.
+``@treasurio.tweet`` decorator.::
 
     import treasuryio
 
@@ -50,7 +56,7 @@ Define a function that produces the text of the tweet, and decorate it with the
             change = "decreased"
 
         # humanize values
-        # Notice the included `human_date` and `human_number` functions which simplify these values for you
+        # Notice the included ``human_date`` and ``human_number`` functions which simplify these values for you
         current_date = human_date(df['date'][0])
         amt = human_number(current_amt)
         delta = human_number(delta)
@@ -60,11 +66,11 @@ Define a function that produces the text of the tweet, and decorate it with the
         vals = (current_date, amt, change, previous_date, URL)
         return "As of %s, the US Gov is $%s in debt. This amount has %s since %s - %s" % vals
 
-Then just run it.
+Then just run it.::
 
     total_debt_tweet()
 
-You can get fancy by switching the functions that you use.
+You can get fancy by switching the functions that you use.::
 
     import treasuryio
     import random

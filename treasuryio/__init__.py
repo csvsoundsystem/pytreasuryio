@@ -28,5 +28,6 @@ from query import query
 __title__ = 'treasuryio'
 __version__ = '0.0.1'
 __author__ = 'Thomas Levine'
+__author_email__ = 'occurrence@thomaslevine.com'
 __license__ = 'MIT'
 __copyright__ = 'Copyright 2013 Thomas Levine'

@@ -27,7 +27,7 @@ import treasuryio
 
 setup(name='treasuryio',
     author=treasuryio.__author__,
-    author_email='',
+    author_email=treasuryio.__author__,
     description='Query treasury.io through Python, returning Pandas DataFrames',
     url='https://github.com/csvsoundsystem/pytreasuryio.git',
     classifiers=[
