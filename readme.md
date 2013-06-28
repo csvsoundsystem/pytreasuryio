@@ -8,14 +8,15 @@ It also has some helpers to make a Twitter bot from the treasury.io data.
 
 ## Installation
 
-    pip install pytreasuryio
+    pip install treasuryio
 
 ## Example
 
 ### Basic query
 
     # Operating cash balances for May 22, 2013
+    import treasuryio
     sql = 'SELECT * FROM "t1" WHERE "date" = \'2013-05-22\';'
-    treasuryio(sql)
+    treasuryio.query(sql)
 
 ### Twitter bot
