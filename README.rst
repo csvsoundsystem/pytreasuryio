@@ -28,7 +28,10 @@ Twitter bot
 ~~~~~~~~~
 Write a ``~/.twitter.yml`` file.::
 
-    # Example goes here.
+    consumer_key: oeshaoduhsaousaoeuhts
+    consumer_secret: b233tsao-enuhsaoehsunoesudtuhoelaouhs2uo
+    access_token: 2349081293-astoehusatoehusaoeustahoeuhh2AOEUTAouhc
+    access_token_secret: 9023uonshesuaHONETuoeuoeouo0eOHNEuhOuoeu
     
 Define a function that produces the text of the tweet, and decorate it with the
 ``@treasurio.tweet`` decorator.::
