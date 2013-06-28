@@ -1,9 +1,12 @@
-import tweepy
+import os
 import yaml
 from datetime import datetime
+
+import tweepy
+
 from query import query
 
-def _connect_to_twitter(config="api.yml"):
+def _connect_to_twitter(config = os.expanduser("~/twitter.yml")):
     conf = yaml.safe_load(open(config))
     auth = tweepy.OAuthHandler(conf['consumer_key'], conf['consumer_secret'])
     auth.set_access_token(conf['access_token'], conf['access_token_secret'])
