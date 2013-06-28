@@ -26,7 +26,7 @@ from tweetbot import tweet
 from query import query
 
 __title__ = 'treasuryio'
-__version__ = '0.0.2'
+__version__ = '0.0.3'
 __author__ = 'Thomas Levine'
 __author_email__ = 'occurrence@thomaslevine.com'
 __license__ = 'MIT'
