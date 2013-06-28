@@ -1,11 +1,6 @@
 import tweepy
-import math
-import re, sys, yaml
+import yaml
 from datetime import datetime
-from json import load
-from urllib2 import urlopen
-from urllib import urlencode
-from pandas import DataFrame
 from query import query
 
 def _connect_to_twitter(config="api.yml"):

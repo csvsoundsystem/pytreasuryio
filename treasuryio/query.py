@@ -1,5 +1,5 @@
 from json import load
-from urllib import urlopen
+from urllib2 import urlopen
 from urllib import urlencode
 
 from pandas import DataFrame

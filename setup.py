@@ -21,6 +21,7 @@
 # TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE
 # OR OTHER DEALINGS IN THE SOFTWARE.
 
+import setuptools
 from distutils.core import setup
 import treasuryio
 
@@ -38,6 +39,8 @@ setup(name='treasuryio',
         'Topic :: Database :: Front-Ends',
     ],
     packages=['treasuryio'],
+
+    install_requires = ['pandas', 'tweepy'],
 
     version=treasuryio.__version__,
     license='MIT'
