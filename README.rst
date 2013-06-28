@@ -74,7 +74,7 @@ Define a function that produces the text of the tweet, and decorate it with the
         previous_date = human_date(df['date'][end])
 
         # generate tweet
-        vals = (current_date, amt, change, previous_date, URL)
+        vals = (current_date, amt, change, previous_date, 'http://treasury.io')
         return "As of %s, the US Gov is $%s in debt. This amount has %s since %s - %s" % vals
 
 Then just run it.::
