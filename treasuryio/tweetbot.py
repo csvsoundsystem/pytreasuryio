@@ -6,7 +6,7 @@ import tweepy
 
 from query import query
 
-def _connect_to_twitter(config = os.expanduser("~/twitter.yml")):
+def _connect_to_twitter(config = os.path.expanduser("~/.twitter.yml")):
     conf = yaml.safe_load(open(config))
     auth = tweepy.OAuthHandler(conf['consumer_key'], conf['consumer_secret'])
     auth.set_access_token(conf['access_token'], conf['access_token_secret'])
