@@ -25,14 +25,17 @@ import setuptools
 from distutils.core import setup
 import treasuryio
 
+with open('README.rst') as file:
+    long_description = file.read()
+
 setup(name='treasuryio',
     author=treasuryio.__author__,
     author_email=treasuryio.__author__,
     description='Query treasury.io through Python, returning Pandas DataFrames',
+    long_description=long_description,
     url='https://github.com/csvsoundsystem/pytreasuryio.git',
     classifiers=[
         'Intended Audience :: Developers',
-        'Intended Audience :: Science/Research',
         'License :: OSI Approved :: MIT License',
         'Programming Language :: Python :: 2.7',
         'Programming Language :: SQL',
