@@ -4,20 +4,30 @@ from urllib import urlencode
 
 from pandas import DataFrame
 
-def query(sql):
+def query(sql, format='df'):
     '''
     Submit an `sql` query (string) to treasury.io and return a pandas DataFrame.
 
     For example::
 
         print('Operating cash balances for May 22, 2013')
-        print(treasury.io('SELECT * FROM "t1" WHERE "date" = \'2013-05-22\';'))
+        print(treasuryio.query('SELECT * FROM "t1" WHERE "date" = \'2013-05-22\';'))
+    
+    Return a dict::
+    
+        treasuryio.query('SELECT * FROM "t1" WHERE "date" = \'2013-05-22\';', format='dict')
+        
     '''
     url = 'https://premium.scraperwiki.com/cc7znvq/47d80ae900e04f2/sql/'
     query_string = urlencode({'q':sql})
     handle = urlopen(url + '?' + query_string)
     if handle.code == 200:
         d = load(handle)
-        return DataFrame(d)
+        if format == 'df':
+            return DataFrame(d)
+        elif format == 'dict'
+            return d
+        else:
+            raise ValueError('format must equal "df" or "dicf"')
     else:
         raise ValueError(handle.read())
