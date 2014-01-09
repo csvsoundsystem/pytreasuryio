@@ -28,6 +28,6 @@ def query(sql, format='df'):
         elif format == 'dict'
             return d
         else:
-            raise ValueError('format must equal "df" or "dicf"')
+            raise ValueError('format must equal "df" or "dict"')
     else:
         raise ValueError(handle.read())
