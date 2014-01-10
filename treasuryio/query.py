@@ -25,7 +25,7 @@ def query(sql, format='df'):
         d = load(handle)
         if format == 'df':
             return DataFrame(d)
-        elif format == 'dict'
+        elif format == 'dict':
             return d
         else:
             raise ValueError('format must equal "df" or "dict"')
