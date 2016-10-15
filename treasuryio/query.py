@@ -12,13 +12,13 @@ def query(sql, format='df'):
 
         print('Operating cash balances for May 22, 2013')
         print(treasuryio.query('SELECT * FROM "t1" WHERE "date" = \'2013-05-22\';'))
-    
+
     Return a dict::
-    
+
         treasuryio.query('SELECT * FROM "t1" WHERE "date" = \'2013-05-22\';', format='dict')
-        
+
     '''
-    url = 'https://premium.scraperwiki.com/cc7znvq/47d80ae900e04f2/sql/'
+    url = 'http://api.treasury.io/cc7znvq/47d80ae900e04f2/sql/'
     query_string = urlencode({'q':sql})
     handle = urlopen(url + '?' + query_string)
     if handle.code == 200:
